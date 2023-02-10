@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="Assets/i1.jpg" alt="" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <h3>INO Designs</h3>
+                </div>
+                <div class="menu-icons">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>LET'S START TO DESIGN</h1>
+                <h3>"Good design is obvious. Great design is transparent."</h3>
+
+                <div>
+                    <button type="button">Show Designs</button>
+                    <button type="button" class="btn-2">Create own Designs</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+
+        var images = new Array(
+            "Assets/i1.jpg",
+            "Assets/i2.jpg",
+            "Assets/i3.jpg",
+            "Assets/i4.jpg"
+        );
+
+        var len = images.length;
+        var i = 0;
+
+        function slider(){
+            if(i > len-1){
+                i = 0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slider()',3000);
+        }
+    </script>
+
+</body>
+</html>
